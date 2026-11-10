@@ -3,7 +3,8 @@
   // Trae Python, git, GitHub CLI y Docker (Docker dentro del codespace), y al
   // crearse instala Semgrep, Bandit, Trivy, Hadolint y Gitleaks con versión fija.
   "name": "CenfoPay · CIB-665 DevSecOps",
-  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  // La imagen se arma con .devcontainer/Dockerfile (Python 3.12 sin el repositorio de Yarn vencido).
+  "build": { "dockerfile": "Dockerfile" },
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/github-cli:1": {}
